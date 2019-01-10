@@ -22,3 +22,29 @@
     </script>
 </body>
 </html>
+corrigé :
+<script>
+        function showInfo() {// Appel de la fonction dans le script
+            //déclaratiosn de variables et récupérations des valeurs de l'ID entre ()
+            var lastName = document.getElementById("lastname").value;
+            var firstName = document.getElementById("firstname").value;
+            var city = document.getElementById("city").value;
+            // déclaration du Regex 
+            var regexName = /^[a-z\-éçàèêëâäîïûüÿôöù']+$/i;
+            //var lastNameResult = regexName.test(lastName); suppression de la var en la déplaçant dans le if plus bas
+            //var firstNameResult = regexName.test(firstName); "    "
+            //var cityResult = regexName.test(city);           "    "
+            if (regexName.test(lastName) == false) { // insertion de regexName.test(lastName)
+                alert('Nom non valide.');
+            }
+            else if (regexName.test(firstName) == false) {
+                alert('Prénom non valide.');
+            }
+            else if (regexName.test(city) == false) {
+                alert('Ville non valide.');
+            }
+            else {
+                alert(`Nom : ${lastName} \nPrénom : ${firstName} \nVille : ${city}`);
+            }
+        }
+    </script>
