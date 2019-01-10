@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Js4</title>
+</head>
+<body>
+    <form onsubmit="afficher()">
+        <div><label for="lastname">Nom : </label><input type="text" name="lastname" id="lastname" /></div>
+        <div><label for="firstname">Prénom : </label><input type="text" name="firstname" id="firstname" /></div>
+        <div><label for="city">Ville : </label><input type="text" name="city" id="city" /></div>
+        <div><input type="submit" name="submit" id="submit" value="valider" /></div>
+    </form>
+    <script>
+        function afficher()
+        {
+        var nom = document.getElementById("lastname").value;
+        var prenom = document.getElementById("firstname").value;
+        var ville = document.getElementById("city").value;
+        alert(`Nom : ${nom}\n Prénom : ${prenom}\n  Ville: ${ ville }`);
+        }
+    </script>
+</body>
+</html>
